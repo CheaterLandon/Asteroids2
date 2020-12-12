@@ -1,9 +1,9 @@
 class Bullet extends Floater{
   private double dRadians;
   public Bullet(){
-    myCenterX = anch.getMyX();
-    myCenterY = anch.getMyY();
-    myPointDirection = anch.getMyPD();
+    myCenterX = tim.getMyX();
+    myCenterY = tim.getMyY();
+    myPointDirection = tim.getMyPD();
     dRadians = myPointDirection*(Math.PI/180);
     myDirectionX = 5*Math.cos(dRadians) + myDirectionX;
     myDirectionY = 5*Math.sin(dRadians) + myDirectionY;
@@ -22,20 +22,20 @@ class Bullet extends Floater{
     //wrap around screen    
     if(myCenterX >width)
     {     
-    gepa.remove(this);    
+     yeet.remove(this);    
     }    
     else if (myCenterX<0)
     {     
-      gepa.remove(this);   
+      yeet.remove(this);   
     }    
     if(myCenterY >height)
     {    
-      gepa.remove(this); 
+      yeet.remove(this); 
     } 
     
     else if (myCenterY < 0)
     {     
-      gepa.remove(this);    
+      yeet.remove(this);    
     }   
   }   
   public float getMyX(){
