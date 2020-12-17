@@ -1,7 +1,6 @@
 Star[] nightSky = new Star [200];
 ArrayList <Asteroid> kirk = new ArrayList <Asteroid>();
 Spaceship tim = new Spaceship();
-ArrayList <Bullet> yeet = new ArrayList <Bullet>();
 int a = 10;
 int lev = 1;
 public void setup()
@@ -32,17 +31,6 @@ public void draw()
           kirk.remove(p);
           break;
         }
-          for(int k = 0; k < yeet.size(); k++)
-          if(dist(qwe.get(p).getMyX(), qwe.get(p).getMyY(), yeet.get(k).getMyX(), yeet.get(k).getMyY()) < 20){
-          qwe.remove(p);
-          yeet.remove(k);
-          break;
-        }
-    }
-  for(int k = 0; k < yeet.size(); k++){
-      yeet.get(k).show();
-      yeet.get(k).move();
-    }
     }
   tim.move();
   tim.show();
@@ -65,8 +53,4 @@ public void keyPressed(){
   }else if(key == 'd'){
       tim.turn(30);
     }
-   else if(key == ' '){
-      if(yeet.size() < 8)
-        yeet.add(new Bullet());
-   }
   }
